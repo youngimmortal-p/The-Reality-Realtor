@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Expert real estate advisory, sales, and property management in Enugu. Trusted by 2,500+ clients. Book your consultation today.">
+<title>Stephanie Onyike | Enugu Real Estate Advisor, Sales & Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --red: #C8102E;
+  --red-dark: #A00D24;
+  --black: #0A0A0A;
+  --gray: #6B6B6B;
+  --light: #F8F8F8;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.1;
+}
+
+.logo-main {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.logo-main span { 
+  color: var(--red); 
+}
+
+.logo-sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--red);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.nav-links a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--red); }
+.mobile-menu { display: none; font-size: 24px; cursor: pointer; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  color: white;
+}
+.btn-primary {
+  background: var(--red);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(200,16,46,0.2);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--black);
+}
+.btn-dark {
+  background: var(--black);
+  color: var(--white);
+}
+.btn-dark:hover { background: #333; }
+
+/* Hero */
+.hero {
+  padding: 180px 0 100px;
+  background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2070') center/cover;
+  color: var(--white);
+  text-align: center;
+}
+.hero-badge {
+  background: var(--red);
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 32px;
+  opacity: 0.9;
+}
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.trust-bar {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.trust-bar i { color: var(--red); margin-right: 8px; }
+
+/* Sections */
+section { padding: 100px 0; }
+.section-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 40px;
+}
+.section-subtitle {
+  text-align: center;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto 64px;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* WhatsApp Screenshot Testimonials */
+.whatsapp-testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.wa-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  background: var(--white);
+  border: 1px solid #eee;
+}
+
+.wa-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.wa-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Red accent bar for luxury feel */
+.wa-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: var(--red);
+}
+
+@media (max-width: 768px) {
+ .whatsapp-testimonials {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 48px auto 0;
+  }
+}
+/* 3 Pillars */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+.feature {
+  padding: 40px 32px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.feature:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+.feature h3 {
+  margin: 20px 0 12px;
+  font-size: 24px;
+}
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--red);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.feature-link {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+  display: inline-block;
+}
+
+/* Advisory Tab */
+.advisory {
+  background: var(--light);
+}
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  padding: 12px 24px;
+  background: var(--white);
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.tab-btn.active,.tab-btn:hover {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.5s; }
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Listings */
+.listing-filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.filter-btn.active,.filter-btn:hover {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+.listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+}
+.listing-card {
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.listing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+.listing-img {
+  height: 240px;
+  background: #ddd;
+  position: relative;
+}
+.listing-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.price-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--red);
+  color: var(--white);
+  padding: 8px 16px;
+  font-weight: 600;
+}
+.listing-content { padding: 24px; }
+.listing-content h3 { margin-bottom: 8px; }
+.listing-meta {
+  display: flex;
+  gap: 16px;
+  color: var(--gray);
+  font-size: 14px;
+  margin: 12px 0 20px;
+}
+.listing-meta i { color: var(--red); }
+
+/* Lead Quiz */
+.quiz-section {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+.quiz-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1A1A1A;
+  padding: 48px;
+}
+.quiz-question { display: none; }
+.quiz-question.active { display: block; }
+.quiz-options {
+  display: grid;
+  gap: 12px;
+  margin: 32px 0;
+}
+.quiz-option {
+  padding: 16px;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.quiz-option:hover {
+  border-color: var(--red);
+  background: rgba(200,16,46,0.1);
+}
+
+/* Testimonials */
+.testimonial-slider {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial { display: none; }
+.testimonial.active { display: block; animation: fadeIn 0.5s; }
+.testimonial p {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.testimonial-author { color: var(--red); font-weight: 600; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+
+/* CTA Section */
+.cta-section {
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+}
+
+/* Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 48px;
+  color: var(--black);
+}
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.form-group input,.form-group select,.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus {
+  outline: none;
+  border-color: var(--red);
+}
+.form-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 16px;
+  line-height: 1.4;
+}
+
+.form-note i {
+  color: var(--red);
+  margin-right: 6px;
+}
+
+/* Sticky CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  border-radius: 50px;
+  padding: 16px 24px;
+  box-shadow: 0 10px 30px rgba(200,16,46,0.3);
+}
+/* Add this to your style.css for a subtle pulse effect */
+.sticky-cta { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+/* Footer */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 64px 0 32px;
+  text-align: center;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 32px 0;
+}
+.social-links a {
+  color: var(--white);
+  font-size: 24px;
+  transition: color 0.3s;
+}
+.social-links a:hover { color: var(--red); }
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero h1 { font-size: 36px; }
+.nav-links {
+   display: none;
+   position: absolute;
+   top: 80px;
+   left: 0;
+   width: 100%;
+   background: var(--white);
+   flex-direction: column;
+   padding: 20px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+ }
+.nav-links.active { display: flex; }
+.nav-links a { margin: 12px 0; }
+.mobile-menu { display: block; }
+  section { padding: 64px 0; }
+.trust-bar { gap: 24px; }
+.quiz-box,.contact-form { padding: 32px 24px; }
+}
+
+/* Custom Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,10,10,0.8);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 40px 32px;
+  border-radius: 4px;
+  max-width: 380px;
+  text-align: center;
+  border-top: 4px solid var(--red);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  transform: translateY(20px);
+  animation: slideUp 0.4s ease forwards;
+}
+
+.modal-icon {
+  width: 64px;
+  height: 64px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.modal-icon i {
+  font-size: 32px;
+  color: var(--white);
+}
+
+.modal-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--black);
+}
+
+.modal-content p {
+  color: var(--gray);
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+    <div class="logo">
+  <div class="logo-main">Stephanie <span>Onyike</span></div>
+  <div class="logo-sub">The Realty Realtor</div>
+</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#pillars">Services</a>
+        <a href="#listings">Listings</a>
+        <a href="#advisory">Advisory</a>
+        <a href="#contact" class="btn btn-primary">Book Free Audit</a>
+      </div>
+      <div class="mobile-menu" id="mobileMenu"><i class="fas fa-bars"></i></div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">ENUGU'S TRUSTED REAL ESTATE ADVISOR</div>
+    <h1>Find Your Dream Property in Enugu With Confidence</h1>
+    <p>From advisory to sales to property management — I handle the details so you don’t have to DM for answers. 2,500+ people trust me to simplify Enugu real estate.</p>
+    <div class="hero-ctas">
+      <a href="#listings" class="btn btn-primary">Browse Enugu Listings</a>
+      <a href="#contact" class="btn btn-secondary">Book Free Property Audit</a>
+    </div>
+    <div class="trust-bar">
+      <div><i class="fab fa-instagram"></i> 2.5k+ IG Community</div>
+      <div><i class="fas fa-key"></i> Advisory | Sales | Management</div>
+      <div><i class="fab fa-youtube"></i> Featured on YouTube</div>
+    </div>
+  </div>
+</section>
+
+<section id="pillars" class="reveal">
+  <div class="container">
+    <h2 class="section-title">Tired of Waiting for Replies in the DMs?</h2>
+    <p class="section-subtitle">Get instant access to everything you usually ask for. No delays.</p>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Enugu Market Advisory</h3>
+        <p>Download my latest Enugu price guides and watch weekly YouTube breakdowns. Know what to buy and when.</p>
+        <a href="#advisory" class="feature-link">Get Free Report →</a>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-home"></i></div>
+        <h3>Live Sales Gallery</h3>
+        <p>Browse verified Enugu properties with photos, prices, and virtual tours. Updated daily so you never DM “Is this still available?”</p>
+        <a href="#listings" class="feature-link">View Listings →</a>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-building"></i></div>
+        <h3>Property Management</h3>
+        <p>Landlords: Submit your Enugu property in 60 seconds. I handle tenants, rent, and maintenance while you earn.</p>
+        <a href="#contact" class="feature-link">Apply Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="advisory" class="advisory reveal">
+  <div class="container">
+    <h2 class="section-title">Enugu Real Estate Advisory</h2>
+    <p class="section-subtitle">Stop guessing. Start investing with data from Enugu's most trusted advisor.</p>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="video">Latest Video</button>
+      <button class="tab-btn" data-tab="guide">Price Guide</button>
+      <button class="tab-btn" data-tab="report">Market Report</button>
+    </div>
+
+<div id="video" class="tab-content active">
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/OafE7YGNnAk" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p style="text-align: center; margin-top: 24px;">Subscribe for weekly Enugu property insights</p>
+</div>
+
+    <div id="guide" class="tab-content">
+      <div style="max-width: 500px; margin: 0 auto; text-align: center;">
+        <h3 style="margin-bottom: 16px;">2026 Enugu Property Price Guide</h3>
+        <p style="margin-bottom: 24px;">Know the real prices in Independence Layout, GRA, Trans Ekulu, and New Haven before you buy.</p>
+        <form id="guideForm">
+          <div class="form-group">
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Me The Free Guide</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="report" class="tab-content">
+      <div style="max-width: 500px; margin: 0 auto; text-align: center;">
+        <h3 style="margin-bottom: 16px;">Q2 2026 Enugu Market Report</h3>
+        <p style="margin-bottom: 24px;">Which areas are appreciating fastest? Where are rental yields highest? Get the data.</p>
+        <a href="#" class="btn btn-dark">Download Report</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="listings" class="reveal">
+  <div class="container">
+    <h2 class="section-title">Featured Enugu Listings</h2>
+    <p class="section-subtitle">Verified properties. Real photos. No “DM for price”.</p>
+
+    <div class="listing-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sale">For Sale</button>
+      <button class="filter-btn" data-filter="rent">For Rent</button>
+      <button class="filter-btn" data-filter="land">Land</button>
+    </div>
+
+    <div class="listings">
+      <div class="listing-card" data-category="sale">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" alt="Luxury Duplex Enugu">
+          <div class="price-tag">₦85,000,000</div>
+        </div>
+        <div class="listing-content">
+          <h3>4-Bedroom Luxury Duplex</h3>
+          <p><i class="fas fa-map-marker-alt" style="color: var(--red);"></i> Independence Layout, Enugu</p>
+          <div class="listing-meta">
+            <span><i class="fas fa-bed"></i> 4 Beds</span>
+            <span><i class="fas fa-bath"></i> 5 Baths</span>
+            <span><i class="fas fa-ruler-combined"></i> 500 sqm</span>
+          </div>
+<a href="https://wa.me/2348069454058?text=Hi%20Stephanie,%20I'm%20interested%20in%20the%204-Bedroom%20Luxury%20Duplex%20in%20Independence%20Layout.%20Is%20it%20still%20available%3F"
+   class="btn btn-primary" target="_blank">
+   <i class="fab fa-whatsapp"></i> WhatsApp Agent
+</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-category="land">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2032" alt="Land Enugu">
+          <div class="price-tag">₦25,000,000</div>
+        </div>
+        <div class="listing-content">
+          <h3>1000sqm C of O Land</h3>
+          <p><i class="fas fa-map-marker-alt" style="color: var(--red);"></i> New Haven Extension, Enugu</p>
+          <div class="listing-meta">
+            <span><i class="fas fa-file-contract"></i> C of O</span>
+            <span><i class="fas fa-road"></i> Tarred Road</span>
+            <span><i class="fas fa-bolt"></i> Estate</span>
+          </div>
+        <a href="https://wa.me/2348069454058?text=Hi%20Stephanie,%20I%20want%20details%20on%20the%201000sqm%20C%20of%20O%20Land%20in%20New%20Haven%20Extension.%20Send%20survey%20plan%20please."
+   class="btn btn-primary" target="_blank">
+   <i class="fab fa-whatsapp"></i> Request Survey
+</a>
+        </div>
+      </div>
+
+      <div class="listing-card" data-category="rent">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2084" alt="Apartment Enugu">
+          <div class="price-tag">₦2,500,000/yr</div>
+        </div>
+        <div class="listing-content">
+          <h3>Executive 3-Bedroom Flat</h3>
+          <p><i class="fas fa-map-marker-alt" style="color: var(--red);"></i> GRA, Enugu</p>
+          <div class="listing-meta">
+            <span><i class="fas fa-bed"></i> 3 Beds</span>
+            <span><i class="fas fa-couch"></i> Furnished</span>
+            <span><i class="fas fa-car"></i> Parking</span>
+          </div>
+<a href="https://wa.me/2348069454058?text=Hi%20Stephanie,%20Can%20I%20schedule%20a%20tour%20for%20the%20Executive%203-Bedroom%20Flat%20in%20GRA%3F%20What's%20your%20availability%3F"
+   class="btn btn-primary" target="_blank">
+   <i class="fab fa-whatsapp"></i> Schedule Tour
+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-section reveal">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">What’s Your Enugu Property Goal?</h2>
+    <p class="section-subtitle" style="color: #ccc;">Answer 2 questions and get a custom plan in your inbox. No DMs needed.</p>
+
+    <div class="quiz-box">
+      <div class="quiz-question active" data-question="1">
+        <h3>I want to...</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-next="2" data-value="buy">Buy a home in Enugu</div>
+          <div class="quiz-option" data-next="2" data-value="invest">Invest in Enugu property</div>
+          <div class="quiz-option" data-next="2" data-value="manage">Get my property managed</div>
+          <div class="quiz-option" data-next="2" data-value="sell">Sell my Enugu property</div>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-question="2">
+        <h3>My budget range is...</h3>
+        <div class="quiz-options">
+          <div class="quiz-option" data-next="email" data-value="under-20m">Under ₦20M</div>
+          <div class="quiz-option" data-next="email" data-value="20-50m">₦20M - ₦50M</div>
+          <div class="quiz-option" data-next="email" data-value="50-100m">₦50M - ₦100M</div>
+          <div class="quiz-option" data-next="email" data-value="100m+">₦100M+</div>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-question="email">
+        <h3>Where should I send your custom plan?</h3>
+        <form id="quizForm">
+          <div class="form-group">
+            <input type="email" placeholder="Your email" required style="background: #222; border-color: #444; color: white;">
+          </div>
+          <button type="submit" class="btn btn-primary">Get My Plan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="container">
+    <h2 class="section-title">Real Client Messages</h2>
+    <p class="section-subtitle">Unedited WhatsApp feedback from Enugu clients</p>
+
+    <div class="whatsapp-testimonials">
+      <!-- Testimonial 1 - WhatsApp Screenshot -->
+      <div class="wa-card">
+        <img src="images/tes3.jpg" alt="WhatsApp testimonial from Enugu client">
+      </div>
+
+      <!-- Testimonial 2 - WhatsApp Screenshot -->
+      <div class="wa-card">
+        <img src="images/tes1.jpg" alt="WhatsApp testimonial from landlord">
+      </div>
+
+      <!-- Testimonial 3 - WhatsApp Screenshot -->
+      <div class="wa-card">
+        <img src="images/tes2.jpg" alt="WhatsApp testimonial from investor">
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 32px; color: var(--gray); font-size: 14px;">
+      *Names and numbers hidden for privacy
+    </p>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Ready To Make Your Enugu Property Move?</h2>
+    <p style="max-width: 600px; margin: 0 auto 32px; font-size: 18px;">Don't wait for the perfect opportunity — create it. Book your free 15-min Enugu Property Audit and get clarity today.</p>
+
+    <div class="contact-form">
+      <h3 style="margin-bottom: 24px; text-align: center;">Book Free Property Audit</h3>
+<form id="contactForm">
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="name" required>
+  </div>
+  <div class="form-group">
+    <label>Phone / WhatsApp</label>
+    <input type="tel" id="phone" required>
+  </div>
+  <div class="form-group">
+    <label>I need help with</label>
+    <select id="service" required>
+      <option value="">Select service</option>
+      <option>Buying Property in Enugu</option>
+      <option>Selling My Property</option>
+      <option>Property Management</option>
+      <option>Investment Advisory</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Message</label>
+    <textarea rows="4" id="message" placeholder="Tell me about your property goals..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" style="width: 100%;">Request Callback</button>
+  
+  <p class="form-note">
+    <i class="fas fa-shield-alt"></i> Stephanie personally reviews all inquiries. Expect a response within 24 hours.
+  </p>
+</form>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/2348069454058?text=Hi%20Stephanie,%20I%20saw%20your%20website%20and%20want%20a%20free%20Enugu%20property%20audit.%20My%20budget%20is%20___%20and%20I%20want%20to%20___."
+   class="btn btn-primary sticky-cta" target="_blank">
+  <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</a>
+
+<footer>
+  <div class="container">
+    <div class="logo" style="color: white; margin-bottom: 16px;">Stephanie <span>Onyike</span></div>
+    <p>Enugu Real Estate Advisor | Sales | Property Management</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/the_reality.realtor"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@stephanie_onyike"><i class="fab fa-youtube"></i></a>
+
+      <a href="https://www.linkedin.com/in/the-reality-stephanie-onyike-154796395"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p style="opacity: 0.6; font-size: 14px;">© 2026 Stephanie Onyike Real Estate. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Success Toast Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-icon">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+    <h3>Opening WhatsApp...</h3>
+    <p>Stephanie will see your details in 1 message. Check your WhatsApp app now.</p>
+    <button class="btn btn-primary" onclick="closeModal()">Got it</button>
+  </div>
+</div>
+<script>
+// Mobile Menu
+document.getElementById('mobileMenu').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('active');
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealOnScroll = () => {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const revealTop = el.getBoundingClientRect().top;
+    if (revealTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// Staggered reveal for WhatsApp cards
+
+// Listing filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.listing-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Quiz
+let quizAnswers = {};
+document.querySelectorAll('.quiz-option').forEach(option => {
+  option.addEventListener('click', () => {
+    const currentQ = option.closest('.quiz-question');
+    const nextQ = option.dataset.next;
+    quizAnswers[currentQ.dataset.question] = option.dataset.value;
+
+    currentQ.classList.remove('active');
+    document.querySelector(`[data-question="${nextQ}"]`).classList.add('active');
+  });
+});
+
+document.getElementById('quizForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thanks! Check your email for your custom Enugu property plan. Stephanie will contact you if you qualify for 1-on-1 advisory.');
+  e.target.reset();
+});
+
+// Forms
+document.getElementById('guideForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Price guide sent! Check your email.');
+  e.target.reset();
+});
+
+// Modal controls
+function closeModal() {
+  document.getElementById('successModal').classList.remove('active');
+}
+
+// Close modal on background click
+document.getElementById('successModal').addEventListener('click', function(e) {
+  if(e.target === this) closeModal();
+});
+
+// Form submit to WhatsApp
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value;
+
+  // Use \n for line breaks. Don't encode it yet.
+  const whatsappText = `*New Enugu Property Audit Request*\n\n` +
+    `*Name:* ${name}\n` +
+    `*Phone/WhatsApp:* ${phone}\n` +
+    `*Service Needed:* ${service}\n` +
+    `*Message:* ${message || 'Not provided'}\n\n` +
+    `_Sent from Stephanie's website_`;
+
+  const whatsappNumber = '2348069454058'; // <-- Replace this
+
+  // Only encode the whole thing ONCE, right here
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
+  window.open(whatsappURL, '_blank');
+  
+  document.getElementById('successModal').classList.add('active');
+  this.reset();
+});
+
+// Testimonial slider
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+setInterval(() => {
+  testimonials[currentTestimonial].classList.remove('active');
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+  testimonials[currentTestimonial].classList.add('active');
+}, 5000);
+
+// Sticky header
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+});
+</script>
+
+</body>
+</html>
